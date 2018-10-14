@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            height:3000px;
+        }
+        /*id选择器前面要加#*/
+       #div1{
+           width:200px;
+           height:200px;
+           background:cornflowerblue;
+       }
+       /*标签选择器 名称就是标签名*/
+       div{
+           color:paleturquoise;
+       }
+       /*class选择器 首先要你选中的变量都改成class=“aa”*/
+       .aa{
+           width:200px;
+           height:200px;
+           background:navy;
+       }
+       /*后代选择器
+       div span{
+            color:pink;
+       }*/
+        /*子代选择器*/
+        div>span{
+            color:pink;
+       }
+       /*加.是class选择器  不加是标签选择器*/
+       #ul1 .bb{
+           background:papayawhip;
+       } 
+       #ul1 .bb{
+           color:teal;
+       } 
+            
+      /*分组选择器，群组选择器*/
+       p,ul{
+           color:aqua; 
+       }
+       span{
+           color:mediumpurple;
+       }
+       /*伪类选择器 hover鼠标滑过*/
+    a:hover{
+        color:olivedrab;
+    }
+    #div1:hover{
+        color:mediumvioletred
+    }
+    </style>
+</head>
+<body>
+    <div>1111</div>
+    <div id="div1">2222</div><!--id选择器一个界面只能有一个-->
+    <div>3333</div>
+
+    <div class="aa">4444</div>
+    <div class="aa">5555</div>
+    <div>6666</div>
+
+    <div>
+        <span>spanan</span>
+        <a href="#">aaaa</a>
+        <span>spanpan </span>
+      <p>
+        vbcbcbcbcb<span>12334567</span>
+      </p>
+    </div>
+   
+    <span>spanan</span>
+
+    <ul id="ul1">
+        <li>11</li>
+        <li class="bb">22</li>
+        <li class="bb">33</li>
+    </ul>
+
+</body>
+</html>
