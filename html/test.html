@@ -4,8 +4,8 @@
    <head>
      <meta charset="UTF-8"><!--保证页面不会乱码-->
      <title>标题</title>
-     <meta name="keywords" content="名称">
-     <meta name="description" content="介绍">
+     <meta name="keywords" content="关键字，">
+     <meta name="description" content="描述，介绍">
    </head> 
    <body>
    <body style="height:2000px;"></body>
@@ -17,27 +17,26 @@
         <p>代表段落的p标签</p>
         <!--<img src="网络图片图片右键复制图片地址">-->
         <img src="http://img1.touxiang.cn/uploads/20140513/13-072428_307.jpg">
-        <img src="1.jpg" title="这是一张图" alt="图片图片">//图片显示不出来的时候alt里面的内容就会显示
+        <img src="1.jpg" title="这是一张图" alt="图片图片"><!-- //图片显示不出来的时候alt里面的内容就会显示 -->
         <!--<img src="本地图片的路径"/>-->
         <!--图片所在文件夹和本文档在一起时用  文件名/图片名.jpg
             图片和文档在一个文件夹中只用  图片名.jpg-->
         <a href="超链接跳转网址"target="_blank">超链接跳转界面名称</a>
                <!--http://......... -->
                                  <!--打开新网页的时候原网页还在//-->
-         <ul>
+         <ul><!--无序列表-->
          <li>标题</li>
          <p>段落</p>
          <li>11</li>
          <li>22</li>
          <li>33</li>
-         <!--无序列表-->
-         </ul>
+         
+         </ul> <!--有序列表-->
          <ol> 
          <li>11</li>
          <li>22</li>
          <li>33</li>
-         <!--有序列表-->
-        </ol>
+         </ol>
         <!--区块 用来布局div+css-->
         <!--行级元素 多个占一行 不能设置宽高
             a span label strong b（加粗且重点）
@@ -69,14 +68,24 @@
                <!--自动获取焦点-->
                <label for="bb">用户名：</label><input id="bb" type="text">
            </div>
-            <br/>
            <div>
                <span>密码：</span><input type="password">
            </div>
+            <form action="test1.html">
+                <!-- 文本框 -->
+                用户名：<input type="text">
+                <!-- 密码框 -->
+                <br>
+                密码：<input type="password">
+                <br>
+            </form>
+
+            <br>
+         
              <!--单选框-->
             <input type="radio" name="sex">男
             <input type="radio" name="sex">女
-            <br/>
+           <br> 
             <!--复选框-->
             <input type="checkbox" name="hobby">篮球
             <input type="checkbox" name="hobby">足球
@@ -92,8 +101,12 @@
             <button>按钮</button>
             <!--自动提交按钮-->
             <input type="submit" value="提交表单">
-           
+          
         </form>
         
     </body>
  </html>
+
+
+
+
