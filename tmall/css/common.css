@@ -1,0 +1,60 @@
+*{
+    margin:0;
+    padding:0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font: 12px/1.5 tahoma,arial,"\5b8b\4f53";
+}
+/* inline/inline-block  通过设置父元素的text-align:center */
+/* banner开始 */
+.banner{
+    background: #ff2f7c;
+}
+.banner img{
+    display: block; /* 图片和背景一样宽 */
+    margin: 0 auto; /* 图片自动居中 */
+   
+}
+/* banner 结束 */
+/* header 开始 */
+#header{
+    background: #f2f2f2;
+    height: 40px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.30);
+    }
+.wrapper{
+     width: 1230px;
+     margin:0 auto;
+    }
+.header-login{
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    float: left;
+    }
+.header-login span,.header-loger a{
+    color:#999;
+    }
+.header-login a{
+    text-decoration: none;
+    padding-left: 20px;
+    }
+.header-list{
+      float: right;
+    }
+    .heater-list li a{
+     color:#999;
+    }
+    .header-list li {
+        float: left;
+        line-height: 40px;
+        padding:0 15px 0 20px;
+    }
+
+/* header 结束 */
