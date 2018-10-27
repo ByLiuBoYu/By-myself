@@ -5,45 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="css/iconfont.css">
     <link rel="stylesheet" href="css/common.css">
-</head>
+    </head>
 <body>
     <div class="banner">
         <a href="#">
             <img src="image/banner.jpg" alt="">
         </a>
     </div>
+    
     <div id="header">
         <div class="wrapper">
             <div class="header-login">
                <span>喵，欢迎来天猫</span>
-               <a href="">请登录</a>
-               <a href="">免费注册</a> 
+               <a href="#">请登录</a>
+               <a href="#">免费注册</a> 
             </div>
-            <ul class="header-list">
-            <li>
-                <a href="">我的淘宝</a>
+        <ul class="header-list">
+            <li class="list-menu">
+                <a href="#">我的淘宝</a>
+                <span class="arrow"></span>
+                <ul class="sub-list">
+                    <li>
+                    <a href="#">已买到的宝贝</a>
+                </li>
+                <li>
+                    <a href="#">已卖出的宝贝</a>
+                </li> 
+                </ul>
             </li>
             <li>
-                <a href="">购物车</a>
+                    <a href="#">
+                        <i class="iconfont icon-ai66"></i>
+                      购物车</a>
+            </li>
+            <li class="list-menu">
+                <a href="#">收藏夹</a>
+                <span class="arrow"></span>
+                <ul class="sub-list">
+                        <li>
+                        <a href="#">收藏的宝贝</a>
+                    </li>
+                    <li>
+                        <a href="#">收藏的店铺</a>
+                    </li> 
+                </ul>
             </li>
             <li>
-                <a href="">收藏夹</a>
+                <a href="#"><i class="iconfont icon-shouji"></i>
+                    手机版</a>
+                    <div class="sub-qr">
+                     <img src="image/tel.jpg" alt="">
+                    </div>
             </li>
             <li>
-                <a href="">手机版</a>
+                <a href="#">淘宝网</a>
             </li>
-            <li>
-                <a href="">淘宝网</a>
+            <li class="list-menu">
+                <a href="#">商家支持</a>
+                <span class="arrow"></span>
             </li>
-            <li>
-                <a href="">商家支持</a>
-            </li>
-            <li>
-                <a href="">网站导航</a>
+            <li class="list-menu list-menu-no">
+                <a href="#">
+                    <i class="iconfont icon-liebiao"></i>
+                    网站导航</a>
+                <span class="arrow"></span>
             </li>
         </ul>
         </div>
+    </div>
+
+    <div class="title">
+        <a href="#">
+            <img src="image/title.gif" alt="">
+        </a>
     </div>
 </body>
 </html>
