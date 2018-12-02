@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+         *{
+            margin:0;
+            padding: 0;
+        }
+        body{
+            /* background: #000; */
+            perspective: 800px;  /*放远一段距离 使3D效果更明显*/
+        }
+        #container{
+            width: 200px;
+            height: 200px;
+            margin:50px auto;   /*块元素居中 高是50px */
+            position: relative;
+            -webkit-transform-style: preserve-3d;
+           
+        }
+
+        #container div{
+            width: 200px;
+            height: 200px;
+            /* background: rgba(255,255,255,0.5); */
+            background: rgba(128,128,128,0.5);
+            border-radius: 10px;/*圆角*/
+            text-align: center;/*文本水平居中*/
+            line-height: 200px;
+            font-size: 50px;
+            position: absolute;
+            left:0;
+            top:0;
+        }
+        .c1{
+           -webkit-transform:rotateX(90deg) translateZ(100px);/*z轴是相对于它 不是相对于操作者*/
+
+        }
+        .c2{
+           -webkit-transform: translatez(100px);
+
+        }
+        .c3{
+           -webkit-transform:rotatey(90deg) translatez(100px);
+
+        }
+        .c4{
+           -webkit-transform:rotatey(-90deg) translatez(100px);
+
+        }
+        .c5{
+           -webkit-transform:rotatey(180deg) translatez(100px);
+
+        }
+        .c6{
+           -webkit-transform:rotatex(-90deg) translatez(100px);
+
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+         <div class="c1">1</div>
+         <div class="c2">2</div>
+         <div class="c3">3</div>
+         <div class="c4">4</div>
+         <div class="c5">5</div>
+         <div class="c6">6</div>
+    </div>
+   
+</body>
+</html>
