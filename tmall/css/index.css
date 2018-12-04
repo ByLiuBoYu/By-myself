@@ -289,13 +289,19 @@
 }
 /* brand-logo */
 .brand-logo{
-    background: pink;
+    background: whitesmoke;
     margin-top: 15px;
-
+    overflow: hidden;
+}
+.brand-logo ul{
+    float:left;
+   
 }
 .brand-logo li{
     width: 122px;
     height: 108px;
+    margin-right:1px;
+    margin-bottom:1px;
     background: #fff;
     overflow: hidden;
     position: relative;
