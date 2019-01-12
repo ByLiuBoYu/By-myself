@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>无缝滚动轮播图</title> 
+    <style>
+       *{
+           margin :0;
+           padding:0;
+       }
+       ul{
+           list-style:none;
+       }
+       #container{
+            width: 750px;
+            height: 291px;
+            margin:100px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        #img-box{
+            width: 4500px;
+            position: absolute;
+            left:0;
+            /* transition: left 1s linear; */
+        }
+        #img-box img{
+             float:left;
+        }
+        /* #img-box .active{
+            display: block;
+        } */
+        #btn-box li,#arrow-box li{
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: rgba(0,0,0,0.5);
+            margin-right: 5px;
+            color:#fff;
+            text-align: center;
+            line-height: 20px;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+        #btn-box .selected{
+            background: #ff0036;
+        }
+        #btn-box{
+            position: absolute;
+            right:10px;
+            bottom: 10px;
+        }
+        #arrow-box{
+            position: absolute;
+            left:10px;
+            bottom: 10px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="container">
+         <div id="img-box">
+            <img class="active" src="image/1.jpg" alt="">
+            <img src="image/2.jpg" alt="">
+            <img src="image/3.jpg" alt="">
+            <img src="image/4.jpg" alt="">
+            <img src="image/5.jpg" alt="">
+            <img src="image/1.jpg" alt="">
+
+    </div>
+     <ul id="btn-box">
+        <li class="selected">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <ul id ="arrow-box">
+        <li id="last">&lt;</li>
+        <li id="next">&gt;</li>
+
+    </ul>
+    </div>
+    <script src="../jslib.js"></script>
+    <script>
+        var oContainer=document.getElementById('container');
+        var oBtnBox=document.getElementById("btn-box");
+        var aBtn = oBtnBox.getElementsByTagName('li');
+        var aImg = document.getElementsByTagName('img');
+        var oNext = document.getElementById('next');
+        var oLast = document.getElementById('last');
+        var oImgBox = document.getElementById('img-box');
+
+        //记录当前索引
+        var iNow = 0;
+        oNext.onclick = function(){
+            iNow++;
+            if(iNow==aImg.length){
+                oImgBox.style.left=0;
+                  iNow=1;
+            }
+             change(iNow);
+        }
+        oLast.onclick = function(){
+            iNow--;
+            if(iNow==-1){
+                oImgBox.style.left=-aImg[0].offsetWidth*(aImg.length-1)+"px";
+                iNow=aImg.length-2;
+            }
+            change(iNow);
+        }
+        function change(idx){
+            for(var j=0; j<aBtn.length; j++){
+                aBtn[j].className = "";
+            }
+            aBtn[idx==5?0:idx].className = "selected";
+            animate(oImgBox,{
+                left:-idx*750
+            });
+        }
+      
+    </script>
+</body>
+</html>
