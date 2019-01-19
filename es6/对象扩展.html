@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var name="sd";
+    var age =22;
+    var sc = "school";
+
+
+    // 属性名和变量名同名则省略
+
+    var obj = {
+        name=name,
+        age=age,
+        say:function(){
+            console.log(this.name);
+        }
+    }
+    
+    var obj2 = {
+        name,
+        age,
+        [sc]:'weichuang',
+        say(){
+            console.log(this.name);
+        }
+    }
+    console.log(obj);
+    console.log(obj2);
+
+    console.log(    obj2[sc]  );
+    obj.say();
+    boj2.say();
+    
+    
+    
+    
+    </script>
+</body>
+</html>
