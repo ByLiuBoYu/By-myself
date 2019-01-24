@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Services</title>
+    <style>
+        .active{
+            background:red;
+        }
+        /* .left{
+            float:left;
+            
+        }
+        .right{
+            float:right;
+        }
+        #concent div{
+            background:green;
+            width: 400px;
+            height: 50px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+        #concent{
+            width: 420px;
+            border-bottom: 2px solid slategray;
+            margin:0 auto;
+        }
+        .header{
+            /* margin:0 auto; */
+            /* text-align: center;
+            font-size: 50px;
+            margin-bottom: 10px;
+        } */ 
+        #concent{
+            width: 400px;
+            margin:0 auto;
+        }
+       li{
+           height: 50px;
+           margin-bottom: 10px; 
+           list-style: none;
+           background: green;
+           padding: 0 20px;
+       }
+       li span{
+           float:right;
+       }
+       
+        h3{
+            /* margin:0 auto; */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="concent">
+            <header class="header">services</header>
+            <div id="div1">
+                <a class='left'>aaa</a>
+                <a class='right'>123</a>
+            </div>
+            <div id="div2">
+                    <a class='left'>bbb</a>
+                    <a class='right'>234</a>
+            </div>
+            <div id="div3">
+                    <a class='left'>ccc</a>
+                    <a class='right'>345</a>
+            </div>
+            <div id="div4">
+                    <a class='left'>ddd</a>
+                    <a class='right'>456</a>
+            </div>
+            <div id="div5">
+                    <a class='left'>eee</a>
+                    <a class='right'>567</a>
+            </div>
+    </div> -->
+    <div id="concent">
+        <h2>services</h2>
+        <ul>
+            <li v-for="obj in showlist" :class="{active:obj.isActive}" @click="change(obj)">
+            {{obj.name}}
+            <span>{{obj.price}}</span>
+            </li>
+        
+        </ul>
+        <hr>
+        <h3>
+            total:{{total}}
+        </h3>
+    </div>
+
+    <script src="vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el:"#concent",
+            data:{
+                showlist:[
+                    {
+                        name:'aaa',
+                        price:123,
+                        isActive:false
+                },
+                {
+                        name:'bbb',
+                        price:123,
+                        isActive:false
+                },
+                {
+                        name:'ccc',
+                        price:123,
+                        isActive:false
+                },
+                {
+                        name:'ddd',
+                        price:123,
+                        isActive:false
+                },
+                {
+                        name:'eee',
+                        price:123,
+                        isActive:false
+                },
+                {
+                        name:'fff',
+                        price:123,
+                        isActive:false
+                }
+            ],
+            total:0
+            },
+            methods:{
+                change(obj){
+                    obj.isActive = !obj.isActive;
+                    if(obj.isActive){
+                        this.total +=obj.price;
+                    }
+                    else{
+                        this.total -= obj.price;
+                    }
+                }
+            }
+        })
+             
+    
+    
+    
+    
+    </script>
+</body>
+</html>
