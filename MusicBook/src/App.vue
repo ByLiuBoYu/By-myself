@@ -18,12 +18,12 @@ export default {
          {
            path:"/movie",
            name:"电影",
-           bgColor:"#ff0036"
+           bgColor:"#DB7093"
          },
          {
            path:"/music",
            name:"音乐",
-           bgColor:"#e9f460"
+           bgColor:"#EEE8AA"
          },{
            path:"/book",
            name:"书籍",
@@ -31,7 +31,7 @@ export default {
          },{
            path:"/photo",
            name:"图片",
-           bgColor:"#4abce8"
+           bgColor:"#228B22"
          }
        ]
     }

@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    color:"#ff0036",
+    color:"#DB7093",
     name:"电影",
     photos:[]
   },

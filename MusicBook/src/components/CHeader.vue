@@ -15,7 +15,7 @@
 <style scoped>
     header{
         height:1rem;
-        background: #ff0036;
+        background: #DB7093;
         text-align: center;
         position: fixed;
         top:0px;

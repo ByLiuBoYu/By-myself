@@ -24,7 +24,7 @@
         bottom: 0;
         left:0;
         height: 1rem;
-        background: #ff0036;
+        background: #DB7093;
         width:100%;
     }
     .footer ul{
