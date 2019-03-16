@@ -57,13 +57,13 @@
 .btns li{
     width:0.2rem;
     height:0.2rem;
-    background: #f00;
+    background: rgb(128, 126, 126);
     border-radius: 50%;
     float: left;
     margin-right:0.1rem;
 }
 .btns li.active{
-    background: #0f0;
+    background: rgb(93, 143, 219);
 }
 .fade-enter{
     transform: translateX(100%)
